@@ -1,4 +1,4 @@
-package com.kiki.demo.controllers.models;
+package com.kiki.demo.models;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

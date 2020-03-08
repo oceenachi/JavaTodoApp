@@ -1,6 +1,5 @@
 package com.kiki.demo.controllers;
 
-import com.kiki.demo.controllers.models.Task;
 import org.springframework.http.HttpStatus;
 
 public class MyResponse<T> {

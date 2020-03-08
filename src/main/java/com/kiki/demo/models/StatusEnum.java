@@ -1,4 +1,4 @@
-package com.kiki.demo.controllers.models;
+package com.kiki.demo.models;
 
 public enum StatusEnum {
     pending, done, inprogress,

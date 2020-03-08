@@ -1,6 +1,6 @@
 package com.kiki.demo.repositories;
 
-import com.kiki.demo.controllers.models.Task;
+import com.kiki.demo.models.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,8 @@
 package com.kiki.demo.controllers;
 
-import com.kiki.demo.controllers.models.Task;
+import com.kiki.demo.models.Task;
 import com.kiki.demo.repositories.TaskRepository;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -10,11 +11,12 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("tasks")
+@RequestMapping("/api/v1/tasks")
 public class TaskController {
 
     @Autowired
     private TaskRepository taskRepository;
+
 
 
 
@@ -37,11 +39,12 @@ public class TaskController {
 
 
         List <Task>tasks = taskRepository.findAll();
-        MyResponse<List<Task>> response = new MyResponse<> (HttpStatus.OK, "Tasks retrieved successfuly", tasks);
+        MyResponse<List<Task>> response = new MyResponse<> (HttpStatus.OK, "Tasks retrieved successfully", tasks);
 
         return response;
     }
 
+    @ApiOperation(value="all tasks")
     @PostMapping
     public MyResponse<Task> createTask(@RequestBody Task task){
 //        MyResponse<List<Task>> response = new MyResponse<>();
